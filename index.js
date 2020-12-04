@@ -12,9 +12,6 @@ function displayResults(responseJson) {
 
     $('#results-list').empty();
 
-    //$('#results-list').append(`<li><h3>${responseJson[4].name}</h3></li>`);
-    
-    
     for (let i=0; i<responseJson.length; i++) {
         $('#results-list').append(`
             <li>
@@ -23,7 +20,6 @@ function displayResults(responseJson) {
             </li>`)
     };
     
-
     $('#results').removeClass('hidden');
 };
 
@@ -31,7 +27,6 @@ function watchForm() {
     $('form').submit(event => {
       event.preventDefault();
       let userName = $('#userName').val();
-      console.log(userName);
       getRepos(userName);
     });
 }
